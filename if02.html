@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odd/Even Checker</title>
+    <script>
+        function checkOddEven() {
+            // 사용자로부터 숫자 입력 받기
+            var number = parseInt(document.getElementById('number').value);
+
+            // 숫자가 홀수인지 짝수인지 판단
+            var result = (number % 2 === 0) ? "짝수입니다." : "홀수입니다.";
+
+            // 결과 출력
+            alert("입력한 숫자 " + number + "은(는) " + result);
+        }
+    </script>
+</head>
+<body>
+    <h1>Odd/Even Checker</h1>
+    
+    <label for="number">숫자를 입력하세요:</label>
+    <input type="number" id="number" required><br>
+
+    <button onclick="checkOddEven()">홀수/짝수 판단하기</button>
+</body>
+</html>

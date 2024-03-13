@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Swapper</title>
+    <script>
+        function swapNumbers() {
+            
+            var num1 = parseFloat(document.getElementById('num1').value);
+            var num2 = parseFloat(document.getElementById('num2').value);
+
+            
+            var temp = num1;
+            num1 = num2;
+            num2 = temp;
+
+            
+            alert("변수를 교환한 결과:\n첫 번째 숫자: " + num1 + "\n두 번째 숫자: " + num2);
+        }
+    </script>
+</head>
+<body>
+    <h1>Number Swapper</h1>
+    
+    <label for="num1">첫 번째 숫자:</label>
+    <input type="number" id="num1" required><br>
+
+    <label for="num2">두 번째 숫자:</label>
+    <input type="number" id="num2" required><br>
+
+    <button onclick="swapNumbers()">숫자 교환하기</button>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inch to Centimeter Converter</title>
+    <script>
+        function convertToCm() {
+            
+            var inchValue = parseFloat(document.getElementById('inch').value);
+
+            
+            var cmValue = inchValue * 2.54;
+
+            
+            alert(inchValue + " inch는 " + cmValue + " cm입니다.");
+        }
+    </script>
+</head>
+<body>
+    <h1>Inch to Centimeter Converter</h1>
+    
+    <label for="inch">Inch 값을 입력하세요:</label>
+    <input type="number" id="inch" required><br>
+
+    <button onclick="convertToCm()">변환하기</button>
+</body>
+</html>

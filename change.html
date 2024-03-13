@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coin Payment Calculator</title>
+    <script>
+        function calculateCoins() {
+          
+            var amount = parseInt(document.getElementById('amount').value);
+
+            
+            var num500Coins = Math.floor(amount / 500);
+            var remainingAmount = amount % 500;
+            var num100Coins = Math.floor(remainingAmount / 100);
+
+            
+            alert("금액 " + amount + "원을 500원 동전 " + num500Coins + "개와 100원 동전 " + num100Coins + "개로 지불합니다.");
+        }
+    </script>
+</head>
+<body>
+    <h1>Coin Payment Calculator</h1>
+    
+    <label for="amount">금액을 입력하세요 (원):</label>
+    <input type="number" id="amount" required><br>
+
+    <button onclick="calculateCoins()">동전 계산하기</button>
+</body>
+</html>
